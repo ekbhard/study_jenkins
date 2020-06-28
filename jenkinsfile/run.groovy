@@ -7,7 +7,7 @@ pipeline {
                 script {
                     cleanWs()
                     withCredentials([
-                        usernamePassword(credentialsId: 'srv_sudo',
+                        usernamePassword(credentialsId: 'nemytovGit',
                         usernameVariable: 'username',
                         passwordVariable: 'password')
                     ]) {
