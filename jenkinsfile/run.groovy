@@ -12,8 +12,8 @@ pipeline {
                         passwordVariable: 'password')
                     ]) {
                         try {
-                            sh "echo '${password}' | sudo -S docker stop isng"
-                            sh "echo '${password}' | sudo -S docker container rm isng"
+                            sh "echo '${password}' | sudo -S docker stop nemytov "
+                            sh "echo '${password}' | sudo -S docker container rm nemytov "
                         } catch (Exception e) {
                             print 'container not exist, skip clean'
                         }
@@ -55,8 +55,8 @@ pipeline {
                         passwordVariable: 'password')
                     ]) {
                         
-                        sh "echo '${password}' | sudo -S docker exec -t isng bash -c 'df -h > /stat/stats.txt'"
-                        sh "echo '${password}' | sudo -S docker exec -t isng bash -c 'top -n 1 -b >> /stat/stats.txt'"
+                        sh "echo '${password}' | sudo -S docker exec -t nemytov  bash -c 'df -h > /stat/stats.txt'"
+                        sh "echo '${password}' | sudo -S docker exec -t nemytov  bash -c 'top -n 1 -b >> /stat/stats.txt'"
                     }
                 }
             }
