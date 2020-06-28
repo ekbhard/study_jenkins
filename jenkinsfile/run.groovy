@@ -41,7 +41,7 @@ pipeline {
                     ]) {
 
                         sh "echo '${password}' | sudo -S docker build ${WORKSPACE}/auto -t nemytov_nginx"
-                        sh "echo '${password}' | sudo -S docker run -d -p 8223:80 --name nemytov_nginx -v /home/adminci/is_mount_dir:/stat nemytov_nginx"
+                        sh "echo '${password}' | sudo -S docker run -d -p 8143:80 --name nemytov_nginx -v /home/adminci/is_mount_dir:/stat nemytov_nginx"
                     }
                 }
             }
