@@ -55,8 +55,8 @@ pipeline {
                         passwordVariable: 'password')
                     ]) {
                         
-                        sh "echo '${password}' | sudo -S docker exec -t nemytov  bash -c 'df -h > /stat/stats.txt'"
-                        sh "echo '${password}' | sudo -S docker exec -t nemytov  bash -c 'top -n 1 -b >> /stat/stats.txt'"
+                        sh "echo '${password}' | sudo -S docker exec -t nemytov  bash -c 'df -h > /stat/nemytov.txt'"
+                        sh "echo '${password}' | sudo -S docker exec -t nemytov  bash -c 'top -n 1 -b >> /stat/nemytov.txt'"
                     }
                 }
             }
